@@ -3,3 +3,76 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.boxes{
+    border: 2px solid rgb(98, 160, 88);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box{
+    border: 5px solid rgb(179, 0, 0);
+}
+
+.parrafo_alto{
+    border: 5px solid rgb(86, 11, 108);
+    min-height: 20px;
+    width: 400px;
+}
+
+img{
+    width: 400px;
+}
+
+.galeria_imagenes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.hero{
+    min-height: 450px;
+    background-image: url("../images/perrito-hero.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    padding: 42px;
+    justify-content: center;
+    align-items: end;
+    text-align: center;
+}
+
+.text-hero{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+.menu-lat{
+    background-color: #1b1b1b;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    padding: 20px;
+    gap: 25px;
+}
+.layout{
+    display: flex;
+    min-height: 100vh;
+}
+.content{
+    width: 85%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
