@@ -1,0 +1,115 @@
+.titulo {
+  border: 5px solid gray;
+  text-align: center;
+  transition:
+    border-radius 2s ease,
+    border 4s ease;
+}
+
+.titulo:hover {
+  border: 5px solid red;
+  border-radius: 20px;
+  background-color: beige;
+  text-transform: capitalize;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: brown;
+  transition: all 2s steps(3, end);
+  transform: skew(20deg);
+}
+
+.box:hover {
+  width: 200px;
+}
+
+.box2 {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  transform: skew(0deg) rotate(45deg);
+  transition: transform 2s ease;
+}
+
+.box2:hover {
+  transform: skew(25deg) rotate(0deg);
+}
+
+.box3 {
+  width: 100px;
+  height: 100px;
+  background-color: #14a071;
+  animation-name: colorear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes colorear {
+  from {
+    background-color: #14a071;
+  }
+  to {
+    background-color: orange;
+  }
+}
+
+.box4 {
+  width: 100px;
+  height: 100px;
+  background-color: #7414a0;
+  animation: colorear2 2s ease infinite;
+  animation-direction: alternate;
+}
+
+@keyframes colorear2 {
+  0% {
+    background-color: #7414a0;
+  }
+  25% {
+    background-color: #1b11ad;
+  }
+  50% {
+    background-color: #13b2ce;
+  }
+  75% {
+    background-color: #0db80d;
+  }
+  100% {
+    background-color: #d5d810;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  position: absolute;
+  font-size: 48px;
+  animation: move 4s ease infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(100px);
+  }
+  50% {
+    transform: translateX(0);
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
