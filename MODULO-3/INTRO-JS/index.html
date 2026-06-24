@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
+    <h1>Bienvenidos a JavaScript!</h1>
+
+    <div>
+        Bienvenido <span id="nombre"></span> a nuestra web!
+
+    </div>
+
+    <p>La edad que ingresaste es: <span id="edad"></span></p>
+
+    <img id="imagen" src="https://random.dog/acac6445-5755-45be-bb48-941bda78b5d9.jpg" alt="">
+
+
+    <script>
+
+        var nombre = prompt("Ingrese su nombre")
+
+        var edad = prompt("Ingrese su edad")
+
+        var elementoSpanDeEdad = document.querySelector("#edad")
+
+        elementoSpanDeEdad.innerHTML = edad
+
+        var elementoH1 = document.querySelector("h1")
+
+        var elementoImagen = document.querySelector("#imagen")
+
+        elementoImagen.style.borderRadius = "20px"
+
+        var elementoSpan = document.querySelector("#nombre")
+
+        elementoSpan.innerHTML = nombre
+
+        console.log(elementoSpan)
+
+        /* DOM = Document Object Model */
+        // DOM = Representación de nuestro HTML en un tipo de dato OBJETO
+
+        var numero1 = 5
+        var numero2 = 8
+        var resultado = numero1 + numero2
+
+        //console.log(document)
+        
+
+        /*
+
+        var nombre = prompt("Ingrese su nombre")
+        alert("Hola " + nombre)
+
+        var num1 = prompt("Ingrese un numero") // "2"
+        var num2 = prompt("Ingrese otro numero") // "3"
+        
+        var resultado = Number(num1) + Number(num2)
+    
+        alert("El resultado es: " + resultado)
+
+        */
+
+
+
+    </script>
+  </body>
+</html>

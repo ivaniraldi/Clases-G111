@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Contador</h1>
+    <button
+      onclick="
+        var total = document.querySelector('#total');
+
+        var numeroActual = total.innerHTML;
+
+        var resultado = Number(numeroActual) - 1;
+
+        total.innerHTML = resultado;
+      "
+    >
+      -
+    </button>
+    <span id="total">0</span>
+    <button
+      onclick="
+        var total = document.querySelector('#total');
+
+        var numeroActual = total.innerHTML;
+
+        var resultado = Number(numeroActual) + 1;
+
+        total.innerHTML = resultado;
+      "
+    >
+      +
+    </button>
+  </body>
+</html>
