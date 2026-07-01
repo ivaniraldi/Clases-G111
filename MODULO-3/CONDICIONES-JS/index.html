@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clase 2 - Condiciones en JavaScript</title>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>Condiciones en JavaScript</h1>
+      <button class="theme">Modo Claro / Obscuro</button>
+      <div>
+        <h2>{desafío}</h2>
+        <h3>latam_</h3>
+      </div>
+    </nav>
+    <main>
+        <div>
+            <h4 id="color" style="color: white;"
+            onclick="
+            var titulo = document.querySelector('#color')
+            console.log(titulo.style.color)
+
+            if(titulo.style.color == 'white'){
+                titulo.style.color = 'red'
+            }else{
+                titulo.style.color = 'white'
+            }
+
+            ">Cambio de color</h4>
+        </div>
+
+
+        <section>
+            <p>¿Cuántos lenguajes de programación aprendimos hasta ahora en el curso?</p>
+          
+            <select name="quizz" id="selectQuizz">
+                <option value="0">0 Lenguajes</option>
+                <option value="1">1 Lenguaje</option>
+                <option value="2">2 Lenguajes</option>
+            </select>
+            <button onclick="
+            var selectValue = document.querySelector('#selectQuizz').value
+            console.log(selectValue)
+            if(selectValue == 1){
+                document.querySelector('#respuesta').innerHTML = 'Correcto!'
+            }else{
+                document.querySelector('#respuesta').innerHTML = 'Incorrecto!'
+            }
+            ">
+                Enviar respuesta
+            </button>
+            <p id="respuesta"></p>
+        </section>
+      <section>
+        <input
+          type="password"
+          id="password"
+          placeholder="Ingresa la contraseña"
+        />
+        <button
+          onclick="
+            var passwordIngresada = document.querySelector('#password').value; // .value es para extraer el valor de las etiquetas input y select entre otras..
+            console.log(passwordIngresada);
+
+            if (passwordIngresada == 'password-secreto') {
+              var parrafo = document.querySelector('#respuesta');
+              parrafo.innerHTML = 'Lo lograste!';
+            } else {
+              var parrafo = document.querySelector('#respuesta');
+              parrafo.innerHTML = 'Password incorrecta.';
+            }
+          "
+        >
+          Enviar
+        </button>
+        <p id="respuesta"></p>
+      </section>
+
+
+      <section>
+        <input id="i" type="text">
+        <button
+        onclick="
+        var valorInput = document.querySelector('#i').value
+        var parrafo2 = document.querySelector('#p')
+
+        if(valorInput < 576){
+            parrafo2.innerHTML = 'xs'
+        }else if (valorInput >= 576 && valorInput < 768){
+            parrafo2.innerHTML = 'sm'
+        }else if (valorInput >= 768 && valorInput < 962){
+            parrafo2.innerHTML = 'md'
+        }else{
+            parrafo2.innerHTML = 'xl'
+        }
+        "
+        >Enviar</button>
+        <p id="p"></p>
+      </section>
+    </main>
+    <footer>
+      <h5>2026 @desafiolatam</h5>
+    </footer>
+    <script>
+      // && AND (y) ---> se tienen que cumplir las dos o mas condiciones
+      // || OR (o) ---> se tienen que cumplir alguna de las condiciones
+
+      var password = "abc";
+      if (password == "abc" && password == "cde") {
+        //
+      }
+      /*
+       var temperatura = Number(prompt("Ingrese la temperatura actual:"));
+
+      if (temperatura < 0) {
+        alert("Hace mucho frio!!!");
+      } else if (temperatura >= 10 && temperatura < 15) {
+        alert("Hace frio");
+      } else if (temperatura >= 15 && temperatura < 25) {
+        alert("El clima está templado");
+      } else {
+        alert("Hace calor!");
+      } 
+        */
+
+      /*
+        var password = prompt("Ingresa la contraseña:");
+        if( password == 'secreto'){
+            alert("Conoces el password")
+        }
+        */
+      /*
+      var pedazosDeTorta = 8;
+      var invitados = 12;
+      var cantidadDePedazosPorInvitado = pedazosDeTorta / invitados;
+      if (cantidadDePedazosPorInvitado >= 1) {
+        alert("Hay suficientes pedazos de torta para todos ");
+      } else {
+        alert("Hay más invitados que pedazos de torta ");
+      }
+        */
+
+
+        let a = 500
+        if(a < 576){
+            console.log('xs')
+        }else if(a<768){
+            console.log('sm')
+        }else if(a<962){
+            console.log('md')
+        }else{
+            console.log('xl')
+        }
+    </script>
+  </body>
+</html>
