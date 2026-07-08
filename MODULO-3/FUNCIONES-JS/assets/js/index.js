@@ -67,7 +67,6 @@ console.log(getBkgColor('#p1'))
 console.log(getBkgColor('#p2'))
 
 
-
 function getValue(valorDelInput, par = 5){
     if(valorDelInput > par){
         alert("Mucho")
@@ -80,3 +79,44 @@ function getValue(valorDelInput, par = 5){
         return "Muy poco"
     }
 }
+// FUNCIONES = 3 MANERAS DE DECLARAR 
+// DECLARACION DE FUNCION
+function x(){
+    // instrucciones aqui   
+}
+
+// EXPRESION DE FUNCION
+const b = function(){
+    // instrucciones aqui
+}
+
+// ARROW FUNCTION / FUNCION FLECHA
+// ES IGUAL A LA FUNCION DE EXPRESIÓN SOLO QUE MAS RESUMIDA Y NO PUEDE USAR "this"
+
+const funcionFlecha = ()=>{
+    // instrucciones aqui
+    console.log("Estoy ejecutandome")
+}
+funcionFlecha()
+
+const restar = (a,b) => a-b
+
+
+const body = document.querySelector('body')
+// EL addEventListener tiene 2 param obligatorios, el evento a escuchar, y la funcion a ejecutar.
+
+body.addEventListener('click', ()=>{
+    // instrucciones aqui
+    console.log("Le estoy haciendo click al body")
+})
+// SI O SI EN EL EVENTO KEYDOWN TENEMOS QUE PASARLE A LA FUNCION EL PARAMETRO EVENTO
+body.addEventListener('keydown', (evento)=>{
+    if(evento.key == 'a' || evento.key == "A"){
+        console.log("Estoy apretando la A")
+        document.querySelector('body').style.backgroundColor = 'orange'
+    }
+    if(evento.key == 's'|| evento.key == "S"){
+        console.log("Estoy apretando la S")
+        document.querySelector('body').style.backgroundColor = 'blue'
+    }
+})
