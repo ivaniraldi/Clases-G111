@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Persona</title>
+  </head>
+  <body>
+
+    <p id="user"></p>
+    <script>
+      async function getPersona() {
+        const res = await fetch("https://randomuser.me/api");
+        const data = await res.json();
+      }
+      getPersona();
+
+      async function getPersonajes() {
+        const res = await fetch("https://rickandmortyapi.com/api/character");
+        const data = await res.json();
+        console.log(data.results);
+
+        let template = "";
+        for (let p of data.results) {
+          template += `<p>
+                    <img src="${p.image}"/>
+
+                    ${p.name}</p>`;
+        }
+        document.querySelector("body").innerHTML = template;
+      }
+
+      getPersonajes();
+    </script>
+  </body>
+</html>
