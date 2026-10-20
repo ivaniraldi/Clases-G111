@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ContadorContext } from "../contexts/ContadorContext";
 import { CartContext } from "../contexts/CartContext";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Galeria() {
   const [productos, setProductos] = useState([]);
   const { agregarCarrito } = useContext(CartContext)
+  const navigate = useNavigate()
  
   useEffect(() => {
     const getProducts = async () => {
@@ -33,6 +35,7 @@ export default function Galeria() {
                     image: p.images[0],
                     quantity: 1
                   })} className="btn btn-dark my-3">Agregar al carrito</button>
+                  <button onClick={()=> navigate(`/detalle/${p.id}`)} className="btn btn-light mb-3">Ver detalle</button>
                 </div>
               );
             })
